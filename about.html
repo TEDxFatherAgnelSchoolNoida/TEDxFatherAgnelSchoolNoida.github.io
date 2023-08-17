@@ -11,16 +11,27 @@
 
 <body>
     <nav>
-        <ul>
-            <li><a href="./index.html"><img src="./logo-white.png" alt=""></a></li>
-        </ul>
-        <ul>
-            <li><a href="./about.html"><button>About Us</button></a></li>
-            <li><a href="./tedx.html"><button>About TEDx</button></a></li>
-            <li><a href="./speakers.html"><button>Speakers</button></a></li>
-            <li><a href="./team.html"><button>The Team</button></a></li>
-            <li><button>Contact Us</button></li>
-        </ul>
+
+        <span>
+            <ul>
+                <li><a href="./index.html"><img src="./large.png" alt=""></a></li>
+            </ul>
+            <ul>
+                <li><a href="./about.html"><button>About Us</button></a></li>
+                <li><a href="./tedx.html"><button>About TEDx</button></a></li>
+                <li><a href="./speakers.html"><button>Speakers</button></a></li>
+                <li><a href="./team.html"><button>The Team</button></a></li>
+                <li><button>Contact Us</button></li>
+            </ul>
+        </span>
+        <div class="hamburger">
+            <span>
+                <span id="b1" class="bar"></span>
+                <span id="b2" class="bar"></span>
+                <span id="b3" class="bar"></span>
+            </span>
+            <img src="./logo-white.png" alt="">
+        </div>
     </nav>
     <main>
         <p>
@@ -37,5 +48,16 @@
     </main>
 
 </body>
+<script>
+    const hamburger = document.querySelector(".hamburger>span")
+    const navMenu = document.querySelectorAll("nav>span")
+
+    hamburger.addEventListener("click", mobileMenu)
+
+    function mobileMenu() {
+        hamburger.classList.toggle("active")
+        navMenu.forEach(el => el.classList.toggle("active"))
+    }
+</script>
 
 </html>
