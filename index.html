@@ -7,7 +7,58 @@
     <title>TEDx</title>
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"> -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/pollen-css" /> -->
+    <link rel="stylesheet" href="./flipdown.css">
     <link rel="stylesheet" href="./styles.css">
+    <script src="flipdown.js"></script>
+
+    <style>
+        main {
+            transform: translateY(-1rem);
+        }
+
+        #hero {
+            z-index: -10;
+            position: relative;
+        }
+
+        #hero #flipdown {
+            position: relative;
+            left: 51%;
+
+            z-index: 100;
+            transform: translate(-50%, 23em) scale(0.9);
+        }
+
+        #hero #flipdown::after {
+            content: "";
+            position: absolute;
+            bottom: -1.5em;
+            font-size: 2em;
+            left: 50%;
+            color: var(--primary);
+            transform: translateX(-50%);
+
+        }
+
+        #hero img {
+            z-index: -1;
+            position: relative;
+            width: 110%;
+            left: 0;
+            transform: translate(-5vw, -5.5rem);
+        }
+
+        @media only screen and (max-width: 768px) {
+            #hero img {
+                transform: translate(-0.5rem, -3rem);
+            }
+
+            #flipdown {
+                left: 0;
+                transform: translate(-10rem, 8rem) scale(0.7) !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -15,7 +66,10 @@
 
         <span>
             <ul>
-                <li><a href="./index.html"><img src="./large.png" alt=""></a></li>
+                <a href="./index.html">
+                    <li><img src="./logo-white.png" alt=""></li>
+                    <div class="live">LIVE</div>
+                </a>
             </ul>
             <ul>
                 <li><a href="./about.html"><button>About Us</button></a></li>
@@ -31,43 +85,48 @@
                 <span id="b2" class="bar"></span>
                 <span id="b3" class="bar"></span>
             </span>
-            <img src="./logo-white.png" alt="">
+            <a href="./index.html"><img src="./logo-white.png" alt="">
+                <div class="live">LIVE</div>
+            </a>
         </div>
     </nav>
     <main>
-        <h1>Horizons of change - Dreams, Visions and Reality</h1>
+        <div id="hero">
+            <div class="flipdown" id="flipdown"></div>
+            <img src="./upscale.jpg" alt="">
+        </div>
+    </main>
+    <p>
 
-        <p>
+        “Change is the only constant in life / A man devoid of hope and conscious of
+        being so has ceased to belong to the future”
+        Our school’s motto, “Big Hearts and Brave Minds” urges us to fly beyond
+        the frontiers of our imagination. Fr. Agnel school, not only aims to bring a
+        difference through education, but also enhances the individualism and
+        skills of the students. The school provides its scholars with the ideal
+        environment where they can grow up to be confident, proficient risk takers,
+        and through their valiant efforts, contribute towards the growth of the
+        community they belong to.
+        Horizons of change perfectly resonates with the school’s ideology of
+        guiding its students to be a better version of themselves. It is a port in a
+        storm for people and firmly believes that curiosity and wonder lead us to
+        the unimaginable power of creativity. Therefore, we introduce to you TEDxFather Agnel School, a platform
+        where young individuals discover their
+        identities, passions, and a sense of purpose, enabling them to transcend
+        their boundaries. Our goal is to inform and inspire the young minds,
+        igniting discussions and fostering meaningful connections.
+        The TEDx platform will be graced by influential presenters who will not just
+        deliver thought-provoking talks, but also inspire young and budding minds
+        to persist in their endeavors and continue striving for loftier achievements.
+        The students will be exposed to novel experiences, offering them a glimpse
+        into the real world. TEDx Talks cover a wide array of subjects, including
+        science, education, arts, and more, providing not only informative content
+        but also captivating and enjoyable presentations.
+        Consequently, our school has partnered with remarkable individuals who
+        have brought about positive change in various ways for this thrilling
+        occasion.
 
-            “Change is the only constant in life / A man devoid of hope and conscious of
-            being so has ceased to belong to the future”
-            Our school’s motto, “Big Hearts and Brave Minds” urges us to fly beyond
-            the frontiers of our imagination. Fr. Agnel school, not only aims to bring a
-            difference through education, but also enhances the individualism and
-            skills of the students. The school provides its scholars with the ideal
-            environment where they can grow up to be confident, proficient risk takers,
-            and through their valiant efforts, contribute towards the growth of the
-            community they belong to.
-            Horizons of change perfectly resonates with the school’s ideology of
-            guiding its students to be a better version of themselves. It is a port in a
-            storm for people and firmly believes that curiosity and wonder lead us to
-            the unimaginable power of creativity. Therefore, we introduce to you TEDxFather Agnel School, a platform
-            where young individuals discover their
-            identities, passions, and a sense of purpose, enabling them to transcend
-            their boundaries. Our goal is to inform and inspire the young minds,
-            igniting discussions and fostering meaningful connections.
-            The TEDx platform will be graced by influential presenters who will not just
-            deliver thought-provoking talks, but also inspire young and budding minds
-            to persist in their endeavors and continue striving for loftier achievements.
-            The students will be exposed to novel experiences, offering them a glimpse
-            into the real world. TEDx Talks cover a wide array of subjects, including
-            science, education, arts, and more, providing not only informative content
-            but also captivating and enjoyable presentations.
-            Consequently, our school has partnered with remarkable individuals who
-            have brought about positive change in various ways for this thrilling
-            occasion.
-
-        </p>
+    </p>
     </main>
     <footer>
         This independent TEDx event is operated under license from TED
@@ -76,6 +135,17 @@
 <script>
     const hamburger = document.querySelector(".hamburger>span")
     const navMenu = document.querySelectorAll("nav>span")
+    const flipdownEl = document.querySelector("#flipdown")
+    const liveFlash = document.querySelectorAll(".live")
+    const flipdown = new FlipDown(Math.floor(new Date(
+        "25-Aug-2023 07:30:00"
+        // "20-Aug-2023 22:07:00"
+    ).getTime() / 1000))
+    flipdown.start()
+    flipdown.ifEnded(() => {
+        flipdownEl.innerHTML = ""
+        liveFlash.forEach(el => el.style.display = "initial")
+    })
 
     hamburger.addEventListener("click", mobileMenu)
 
