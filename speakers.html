@@ -7,6 +7,57 @@
     <link rel="stylesheet" href="./styles.css">
 
     <title>About The School</title>
+    <style>
+        main div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 768px) {
+            p {
+                font-size: 20px;
+            }
+
+            main div {
+                flex-direction: column;
+            }
+
+            main img {
+                width: 15rem;
+            }
+        }
+
+        .head {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main div span {
+            padding: 0 1rem;
+            text-align: left;
+        }
+
+        main div span:nth-child(1) {
+            text-align: right;
+        }
+
+        main div span h1 {
+            margin-bottom: 0;
+        }
+
+        main div span h2 {
+            margin-top: 0;
+            color: gray;
+        }
+
+        main img {
+            width: 20rem;
+            border-radius: 100rem;
+            margin: 1rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,14 +65,17 @@
 
         <span>
             <ul>
-                <li><a href="./index.html"><img src="./large.png" alt=""></a></li>
+                <a href="./index.html">
+                    <li><img src="./large.png" alt=""></li>
+                    <div class="live">LIVE</div>
+                </a>
             </ul>
             <ul>
                 <li><a href="./about.html"><button>About Us</button></a></li>
                 <li><a href="./tedx.html"><button>About TEDx</button></a></li>
                 <li><a href="./speakers.html"><button>Speakers</button></a></li>
                 <li><a href="./team.html"><button>The Team</button></a></li>
-                <li><button>Contact Us</button></li>
+                <li><a href="./contact.html"><button>Contact Us</button></a></li>
             </ul>
         </span>
         <div class="hamburger">
@@ -30,11 +84,61 @@
                 <span id="b2" class="bar"></span>
                 <span id="b3" class="bar"></span>
             </span>
-            <a href="./index.html"><img src="./logo-white.png" alt=""></a>
+            <a href="./index.html"><img src="./large.png" alt="">
+                <div class="live">LIVE</div>
+            </a>
         </div>
     </nav>
     <main>
+        <div>
+            <span class="head">
+                <img src="./pankaj.jpg" alt="">
+            </span>
+            <span>
+                <h1>Pankaj Chawla</h1>
+                <h2>Founder & CEO, </h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique voluptate consequatur nesciunt
+                quos, blanditiis quam recusandae ex repellendus numquam sequi alias itaque mollitia debitis aperiam
+                possimus enim! Animi praesentium eveniet cumque, at assumenda dicta consequatur laudantium? Quas,
+                distinctio ullam. Amet ratione debitis corrupti ipsum obcaecati assumenda sapiente saepe error. Sunt
+                blanditiis nihil iste quisquam rerum omnis reiciendis repudiandae pariatur, non illo rem natus tempore
+                possimus dolore inventore cupiditate ut. Optio dolor eligendi omnis maiores hic vero at numquam quaerat
+                inventore? Cum quia quae distinctio repellendus voluptatem expedita autem, tenetur beatae illo. Eligendi
+                iure blanditiis cumque similique magnam vitae molestiae laboriosam neque ipsa tenetur illo ex esse
+                dolorum quia, est delectus nihil. Quo suscipit, repellendus, corporis et eius animi dolorem distinctio
+                qui nostrum quasi, architecto ab eaque impedit. Temporibus, id exercitationem error voluptas ipsa enim
+                doloremque ullam consequuntur, nobis esse odit vitae velit voluptatem cum unde alias, tenetur excepturi
+                magni earum soluta. Iusto quo provident, harum dolore quas voluptatem nostrum sed! Quam itaque quidem
+                aut fuga assumenda dolorem consequuntur necessitatibus veniam labore vel, eveniet similique atque,
+                suscipit delectus eligendi doloribus laboriosam vero quo non corrupti corporis error sapiente. Quidem
+                nobis provident in ut eaque laboriosam recusandae doloribus. In id quo cum.
+            </span>
+        </div>
+        <div>
 
+            <span>
+                <h1>Shriti</h1>
+                <h2>Founder & CEO, </h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique voluptate consequatur nesciunt
+                quos, blanditiis quam recusandae ex repellendus numquam sequi alias itaque mollitia debitis aperiam
+                possimus enim! Animi praesentium eveniet cumque, at assumenda dicta consequatur laudantium? Quas,
+                distinctio ullam. Amet ratione debitis corrupti ipsum obcaecati assumenda sapiente saepe error. Sunt
+                blanditiis nihil iste quisquam rerum omnis reiciendis repudiandae pariatur, non illo rem natus tempore
+                possimus dolore inventore cupiditate ut. Optio dolor eligendi omnis maiores hic vero at numquam quaerat
+                inventore? Cum quia quae distinctio repellendus voluptatem expedita autem, tenetur beatae illo. Eligendi
+                iure blanditiis cumque similique magnam vitae molestiae laboriosam neque ipsa tenetur illo ex esse
+                dolorum quia, est delectus nihil. Quo suscipit, repellendus, corporis et eius animi dolorem distinctio
+                qui nostrum quasi, architecto ab eaque impedit. Temporibus, id exercitationem error voluptas ipsa enim
+                doloremque ullam consequuntur, nobis esse odit vitae velit voluptatem cum unde alias, tenetur excepturi
+                magni earum soluta. Iusto quo provident, harum dolore quas voluptatem nostrum sed! Quam itaque quidem
+                aut fuga assumenda dolorem consequuntur necessitatibus veniam labore vel, eveniet similique atque,
+                suscipit delectus eligendi doloribus laboriosam vero quo non corrupti corporis error sapiente. Quidem
+                nobis provident in ut eaque laboriosam recusandae doloribus. In id quo cum.
+            </span>
+            <span class="head">
+                <img src="./shriti.jpg" alt="">
+            </span>
+        </div>
     </main>
 
 </body>

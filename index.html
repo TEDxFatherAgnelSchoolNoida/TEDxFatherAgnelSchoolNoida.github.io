@@ -48,6 +48,14 @@
             transform: translate(-5vw, -5.5rem);
         }
 
+        p,
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin: 1rem 3rem;
+        }
+
         @media only screen and (max-width: 768px) {
             #hero img {
                 transform: translate(-0.5rem, -3rem);
@@ -67,7 +75,7 @@
         <span>
             <ul>
                 <a href="./index.html">
-                    <li><img src="./logo-white.png" alt=""></li>
+                    <li><img src="./large.png" alt=""></li>
                     <div class="live">LIVE</div>
                 </a>
             </ul>
@@ -76,7 +84,7 @@
                 <li><a href="./tedx.html"><button>About TEDx</button></a></li>
                 <li><a href="./speakers.html"><button>Speakers</button></a></li>
                 <li><a href="./team.html"><button>The Team</button></a></li>
-                <li><button>Contact Us</button></li>
+                <li><a href="./contact.html"><button>Contact Us</button></a></li>
             </ul>
         </span>
         <div class="hamburger">
@@ -85,7 +93,7 @@
                 <span id="b2" class="bar"></span>
                 <span id="b3" class="bar"></span>
             </span>
-            <a href="./index.html"><img src="./logo-white.png" alt="">
+            <a href="./index.html"><img src="./large.png" alt="">
                 <div class="live">LIVE</div>
             </a>
         </div>
@@ -127,6 +135,19 @@
         occasion.
 
     </p>
+    <h3>What is TEDx?</h3>
+    <p>
+        In the spirit of ideas worth spreading, TED has created a program called <a
+            href="https://www.ted.com/tedx">TEDx</a>. TEDx is a program of local, self-organized events that bring
+        people
+        together to share a TED-like experience. Our event is called TEDxFatherAgnelSchoolNoida, where x = independently
+        organized TED
+        event. At our TEDxFatherAgnelSchoolNoida event, TED Talks video and live speakers will combine to spark deep
+        discussion and
+        connection in a small group. The TED Conference provides general guidance for the TEDx program, but individual
+        TEDx
+        events, including ours, are self-organized.
+    </p>
     </main>
     <footer>
         This independent TEDx event is operated under license from TED
@@ -139,7 +160,7 @@
     const liveFlash = document.querySelectorAll(".live")
     const flipdown = new FlipDown(Math.floor(new Date(
         "25-Aug-2023 07:30:00"
-        // "20-Aug-2023 22:07:00"
+        // "23-Aug-2023 22:07:00"
     ).getTime() / 1000))
     flipdown.start()
     flipdown.ifEnded(() => {

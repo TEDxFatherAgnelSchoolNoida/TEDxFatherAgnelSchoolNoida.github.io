@@ -7,7 +7,7 @@
 
 * {
     box-sizing: border-box;
-    --liveshift: 100%
+    --liveshift: -25%
 }
 
 body {
@@ -30,10 +30,10 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
-    transform: translate(var(--liveshift), -35%);
+    transform: translate(var(--liveshift), -5%);
     color: var(--primary);
     font-weight: bold;
-    font-size: larger;
+    font-size: 0.7em;
     border: 2px solid var(--primary);
     border-radius: 100px;
     padding: 3px 15px;
@@ -80,7 +80,7 @@ nav span {
 }
 
 nav img {
-    height: 3em;
+    height: 4.5em;
 }
 
 nav ul {
@@ -100,6 +100,7 @@ nav ul button {
     border-radius: 0.7em 0.15em;
     padding: 0.5em;
     border: 0.5px solid var(--primary);
+    border-width: 0 0 1px 0;
     transition: all 0.5s ease-in-out;
     margin: 0 1rem;
     cursor: pointer;
@@ -129,14 +130,10 @@ nav ul button:hover {
 p {
     font-size: 1em;
     line-height: 1.5 !important;
-    text-align: justify;
+    text-align: left;
 }
 
 @media only screen and (max-width: 768px) {
-    * {
-        --liveshift: 100%;
-    }
-
 
 
     nav {
@@ -233,7 +230,9 @@ p {
     }
 }
 
-h2 {
+h1,
+h2,
+h3 {
     color: var(--primary);
 }
 
