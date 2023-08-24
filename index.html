@@ -14,13 +14,19 @@
     <script src="flipdown.js"></script>
 
     <style>
+        body {
+            margin: 0;
+        }
+
         main {
-            transform: translateY(-1rem);
+            margin: 0;
         }
 
         #hero {
+            width: 100vw;
             z-index: -10;
             position: relative;
+            place-items: center;
         }
 
         #hero #flipdown {
@@ -31,23 +37,19 @@
             transform: translate(-50%, 23em) scale(0.9);
         }
 
-        #hero #flipdown::after {
-            content: "";
-            position: absolute;
-            bottom: -1.5em;
-            font-size: 2em;
-            left: 50%;
-            color: var(--primary);
-            transform: translateX(-50%);
-
+        @media only screen and (min-width: 1600px) {
+            #hero #flipdown {
+                transform: translate(-50%, 30em) scale(0.9);
+            }
         }
 
         #hero img {
+            transform: translateY(-1rem);
             z-index: -1;
             position: relative;
-            width: 110%;
+            width: 100%;
             left: 0;
-            transform: translate(-5vw, -5.5rem);
+            transform: translate(0, -5.5rem);
         }
 
         p,
@@ -58,44 +60,57 @@
             margin: 1rem 3rem;
         }
 
+
+        .no {
+            display: none
+        }
+
         @media only screen and (max-width: 768px) {
-            #hero{
+            #hero {
                 transform: translateY(20px);
             }
+
             #hero img {
-                transform: translate(-0.5rem, -3rem);
+                transform: translate(0rem, -3rem);
             }
 
             #flipdown {
                 left: 0;
                 transform: translate(-10rem, 8rem) scale(0.7) !important;
             }
-            .no{display:none}
-            p,
-        h1,
-        h2,
-        h3,
-        h4 {
-            margin: 1rem 0rem;
-        }
-        }
-        div.vid{
-            display:none;
-            position: absolute;
-            left: 51%;
 
-            z-index: 100;
-            transform: translate(-50%, 30em) scale(1.5);
-        }
-        @media only screen and (max-width: 768px) {
-            .vid{
-                position:relative !important;
-                    transform: translate(0, 3em) scale(1) !important;
-            width:100vw;
-                left:0 !important;
+            p,
+            h1,
+            h2,
+            h3,
+            h4 {
+                margin: 1rem 0.1rem;
             }
-            .live{
-                display:none;
+        }
+
+
+        div.vid {
+            display: none;
+        }
+
+        div.vid iframe {
+            height: 80vh;
+            aspect-ratio: 16/9;
+        }
+
+        @media only screen and (max-width: 768px) {
+            div.vid iframe {
+                width: 90vw;
+                height: auto;
+                aspect-ratio: 16/9;
+            }
+
+            .vid {
+                position: relative !important;
+            }
+
+            .live {
+                display: none !important;
             }
         }
     </style>
@@ -131,15 +146,15 @@
     </nav>
     <main>
         <div id="hero">
-            <DIV class="vid">
+            <div class="vid">
                 <iframe src="https://www.youtube.com/embed/gPL5NglvtOw" frameborder="0" allowfullscreen></iframe>
-            </DIV>
+            </div>
             <div class="flipdown" id="flipdown"></div>
             <img id="poster" src="./upscale.jpg" alt="">
         </div>
     </main>
     <p>
-"A man devoid of hope and conscious of
+        "A man devoid of hope and conscious of
         being so has ceased to belong to the future”.
         Our school’s motto, “Big Hearts and Brave Minds” urges us to fly beyond
         the frontiers of our imagination. Fr. Agnel school, not only aims to bring a
@@ -226,16 +241,20 @@
     const liveFlash = document.querySelectorAll(".live")
     const vid = document.querySelector(".vid")
     const poster = document.querySelector("#poster")
+    const hero = document.querySelector("#hero")
+    const main = document.querySelector("main")
     const flipdown = new FlipDown(Math.floor(new Date(
         "25-Aug-2023 08:30:00"
-        // "24-Aug-2023 12:29:00"
+        // "24-Aug-2023 22:35:00"
     ).getTime() / 1000))
     flipdown.start()
     flipdown.ifEnded(() => {
         flipdownEl.innerHTML = ""
         liveFlash.forEach(el => el.style.display = "initial")
-        vid.style.display="initial"
+        vid.style.display = "block"
         poster.classList.add("no")
+        hero.style.display = "GRID"
+
     })
 
     hamburger.addEventListener("click", mobileMenu)

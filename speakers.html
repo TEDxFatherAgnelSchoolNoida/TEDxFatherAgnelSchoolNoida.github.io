@@ -16,13 +16,26 @@
             align-items: center;
             text-align: center;
         }
+
         span {
-                font-size: 18px;
-            }
-        h1,h2{
-            font-size:initial;}
+            font-size: 18px;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
 
         @media only screen and (max-width: 768px) {
+
+            h1,
+            h2 {
+                text-align: center;
+            }
+
             p {
                 font-size: 20px;
             }
@@ -30,14 +43,20 @@
             main div {
                 flex-direction: column;
             }
-            main div:has(.even){
-                flex-direction:column-reverse;
+
+            main div:has(.even) {
+                flex-direction: column-reverse;
+
+            }
+
+            span {
+                text-align: left !important;
             }
 
             main img {
                 width: 15rem;
             }
-            
+
         }
 
         .head {
@@ -46,7 +65,7 @@
         }
 
         main div span {
-            padding: 0 1rem;.
+            padding: 0 1rem;
             text-align: left;
         }
 
@@ -54,8 +73,9 @@
             text-align: right;
         }
 
-        span:not(.even){
-            text-align:left}
+        span:not(.even) {
+            text-align: left
+        }
 
         main div span h1 {
             margin-bottom: 0;
@@ -64,7 +84,7 @@
         main div span h2 {
             margin-top: 0;
             color: gray;
-            text-transform:uppercase;
+            text-transform: uppercase;
         }
 
         main img {
@@ -209,7 +229,7 @@
                 and testing moments, Father
                 Carvalho - our school's Director
                 has embodied true leadership.
-                He guides us not only though 
+                He guides us not only though
                 words, but by walking the path
                 alongside us—our guiding light
                 when the going gets tough. With
@@ -225,7 +245,7 @@
                 <h1>Smriti R. Sharma
                 </h1>
                 <h2>SOCIOLOGIST AND RESEARCH ASSISTANT
-</h2>
+                </h2>
                 Ms. Smriti R. Sharma has completed her
                 undergraduate degree in Political
                 Science from Kirori Mal College and

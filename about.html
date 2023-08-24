@@ -3,12 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=4.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
 
     <title>About The School</title>
     <link rel="icon" href="favicon.ico" />
+    <style>
+        main {
+            display: flex;
+            gap: 1rem;
+        }
 
+        @media only screen and (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -40,22 +51,47 @@
         </div>
     </nav>
     <main>
-        <h1> Contact Us </h1>
-        <h4> Email : <a href="mailto: tedxfasn@gmail.com">tedxfasn@gmail.com</a> </h4>
-            <h4> Instagram : <img width="1em" src="./insta.png"/> <a href="https://instagram.com/tedx_fatheragnelschoolnoida?igshid=OGQ5ZDc2ODk2ZA==">Father Agnel
-                School Noida</a></h4>
-        <p>
-            Welcome to Fr. Agnel School, Noida, where our foundational values are
-            encapsulated in the motto "Love your neighbor as yourself." Within our
-            institution, we cultivate qualities of compassion, empathy, and unity
-            among our students, creating an environment where collective growth is
-            paramount. Central to our mission is the commitment to "Creating Change
-            through Education," propelling us forward. Our objective revolves around
-            empowering each other to achieve our utmost potential, nurturing
-            generous hearts and courageous minds that will ultimately mold future
-            leaders devoted to making positive contributions to society.
-            
-        </p>
+        <span>
+            <h1> Contact Us </h1>
+            <p>
+                Email : <a href="mailto: tedxfasn@gmail.com">tedxfasn@gmail.com</a>
+                <br>
+                Instagram : <img width="16em" src="./instalogo.png" /> <a
+                    href="https://instagram.com/tedx_fatheragnelschoolnoida?igshid=OGQ5ZDc2ODk2ZA==">tedx_fatheragnelschoolnoida</a>
+            </p>
+            <h1>About The School</h1>
+            <p>
+                Welcome to Fr. Agnel School, Noida, where our foundational values are
+                encapsulated in the motto "Love your neighbor as yourself." Within our
+                institution, we cultivate qualities of compassion, empathy, and unity
+                among our students, creating an environment where collective growth is
+                paramount. Central to our mission is the commitment to "Creating Change
+                through Education," propelling us forward. Our objective revolves around
+                empowering each other to achieve our utmost potential, nurturing
+                generous hearts and courageous minds that will ultimately mold future
+                leaders devoted to making positive contributions to society.
+            </p>
+        </span>
+        <span>
+            <div style="overflow:hidden;resize:none;max-width:100%;width:500px;height:500px;">
+                <div id="gmap-canvas" style="height:100%; width:100%;max-width:100%;"><iframe
+                        style="height:100%;width:100%;border:0;" frameborder="0"
+                        src="https://www.google.com/maps/embed/v1/place?q=Fr.+Agnel+School,+Institutional+Area,+Khora+Colony,+Sector+62,+Noida,+Uttar+Pradesh,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                </div><a class="google-maps-html" href="https://www.bootstrapskins.com/themes"
+                    id="authmaps-data">premium bootstrap themes</a>
+                <style>
+                    #gmap-canvas img.text-marker {
+                        max-width: none !important;
+                        background: none !important;
+                    }
+
+                    img {
+                        max-width: none
+                    }
+                </style>
+            </div>
+        </span>
+
     </main>
 
 </body>
