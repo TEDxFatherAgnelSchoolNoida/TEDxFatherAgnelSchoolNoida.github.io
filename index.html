@@ -75,6 +75,9 @@
             margin: 1rem 0rem;
         }
         }
+        div.vid{
+            display:none
+        }
     </style>
 </head>
 
@@ -109,6 +112,9 @@
     </nav>
     <main>
         <div id="hero">
+            <DIV class="vid">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/VinOrwuxe2Y" frameborder="0" allowfullscreen></iframe>
+            </DIV>
             <div class="flipdown" id="flipdown"></div>
             <img src="./upscale.jpg" alt="">
         </div>
@@ -200,14 +206,16 @@
     const navMenu = document.querySelectorAll("nav>span")
     const flipdownEl = document.querySelector("#flipdown")
     const liveFlash = document.querySelectorAll(".live")
+    const vid = document.querySelector(".vid")
     const flipdown = new FlipDown(Math.floor(new Date(
-        "25-Aug-2023 07:30:00"
-        // "23-Aug-2023 22:07:00"
+        // "25-Aug-2023 07:30:00"
+        "24-Aug-2023 11:57:00"
     ).getTime() / 1000))
     flipdown.start()
     flipdown.ifEnded(() => {
         flipdownEl.innerHTML = ""
         liveFlash.forEach(el => el.style.display = "initial")
+        vid.style.display="initial"
     })
 
     hamburger.addEventListener("click", mobileMenu)
