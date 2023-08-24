@@ -67,6 +67,7 @@
                 left: 0;
                 transform: translate(-10rem, 8rem) scale(0.7) !important;
             }
+            .no{display:none}
             p,
         h1,
         h2,
@@ -225,7 +226,7 @@
         flipdownEl.innerHTML = ""
         liveFlash.forEach(el => el.style.display = "initial")
         vid.style.display="initial"
-        poster.style.display="none"
+        poster.classList.add("no")
     })
 
     hamburger.addEventListener("click", mobileMenu)
